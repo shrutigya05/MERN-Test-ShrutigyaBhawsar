@@ -1,0 +1,39 @@
+Task 3.1 – MCQ (3 mins)
+Question:
+In MongoDB, what is a document?
+a) A table
+b) A row in a table
+c) A JSON-like data structure
+d) A schema validator
+
+Ans--c) A JSON-like data structure
+
+Task 3.2 – Schema Design (7 mins)
+Problem:
+Design a Mongoose schema for a BlogPost with:
+• title (string, required, max 100 chars).
+• content (string, required).
+• tags (array of strings).
+• createdAt (defaults to current date).
+
+solution
+const mongoose = require("mongoose");
+
+const blogPostSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+    maxlength: 100
+  },
+  content: {
+    type: String,
+    required: true
+  },
+  tags: [String],
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = mongoose.model("BlogPost", blogPostSchema);
