@@ -1,0 +1,65 @@
+Task-1.1
+Q1Which React hook is used to manage component state?
+a) useEffect
+b) useState
+c) useContext
+d) useReducer
+
+Ans—(b)useState
+
+Task 1.2
+1.Component Structure
+
+Create a UsersList component.
+
+Use state for:
+
+users → store fetched data
+loading → show loading state
+error → handle API errors
+
+Render:
+Loading text while fetching
+Error message if request fails
+List of users on success
+ 
+2.Lifecycle Method / Hook
+
+Use useEffect() hook.
+Reason: It runs after component mounts and is ideal for API calls.
+
+3.Loading & Error Handling
+
+Before API call → loading = true
+On success → set data, loading = false
+On failure → set error message, loading = false
+
+example of useEffect 
+useEffect(() => {
+  fetchUsers();
+}, []);
+
+Task 1.3 – Coding (Counter Component)
+
+import React, { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+
+      <button onClick={() => setCount(0)}>
+        Reset
+      </button>
+    </div>
+  );
+};
+
+export default Counter;
+
