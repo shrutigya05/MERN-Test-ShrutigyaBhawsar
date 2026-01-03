@@ -9,7 +9,7 @@ Frontend:
 
 React (Vite)
 
-No additional styling included
+No additional styling ( as mention in assignment)
 
 Backend:
 
@@ -25,13 +25,14 @@ Backend runs on http://localhost:4000.
 
 Frontend fetches data from the backend API (CORS enabled).
 
-No authentication implemented.
+No authentication implemented.( as mention in assignment)
 
 Validation prevents adding todos with empty title or description.
 
 MongoDB must be installed and running locally.
 
 💻 Setup Instructions
+
 1️⃣ Backend Setup
 
 Clone the backend repository or create a folder backend.
@@ -95,11 +96,11 @@ http://localhost:5173
 
 🔹 Usage
 
-Enter Title and Description for your todo.
+1.Enter Title and Description for your todo.
 
-Click Add Todo.
+2.Click Add Todo.
 
-Todo will appear in the list below.
+3.Todo will appear in the list below.
 
 If either field is empty, todo will not be added.
 
