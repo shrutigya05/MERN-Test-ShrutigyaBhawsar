@@ -1,0 +1,44 @@
+Task 2.1 – Multiple Choice (5 mins)
+Question:
+What does app.use(express.json()) do in Express?
+a) Parses HTML forms
+b) Parses JSON request bodies
+c) Serves static files
+d) Handles cookies
+
+Ans--(b) Parses JSON request bodies
+
+Task 2.2 – API Design
+
+HTTP Method
+
+DELETE
+
+Route Structure
+DELETE /api/users/:id
+
+Sample Request
+DELETE /api/users/64a123xyz
+
+Sample Response (Success)
+{
+  "message": "User deleted successfully"
+}
+
+Sample Response (Not Found)
+{
+  "message": "User not found"
+}
+
+Task 2.3 – Coding (Express Server)
+
+const express = require("express");
+const app = express();
+
+app.get("/status", (req, res) => {
+  res.json({ message: "Server is running" });
+});
+
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
+});
